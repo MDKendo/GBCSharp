@@ -25,42 +25,50 @@
 
 // Третья задача
 
-Console.Write("Выбери номер дня: ");
+// Console.Write("Выбери номер дня: ");
 
-int day = Convert.ToInt32(Console.ReadLine());
+// int day = Convert.ToInt32(Console.ReadLine());
 
-if (day < 1 || day > 7)
-{
-    Console.Write("Ты не знаешь сколько дней в неделе?");
-}
-else
-{
-    if (day == 1)
-    {
-        Console.Write("Понедельник");
-    }
-    if (day == 2)
-    {
-        Console.Write("Вторник");
-    }
-    if (day == 3)
-    {
-        Console.Write("Это среда мой друг");
-    }
-    if (day == 4)
-    {
-        Console.Write("Четверг");
-    }
-    if (day == 5)
-    {
-        Console.Write("Выдыхай, пятница");
-    }
-    if (day == 6)
-    {
-        Console.Write("Суббота");
-    }
-    if (day == 7)
-    {
-        Console.Write("Воскресенье");
-    }
-}
+// if (day < 1 || day > 7)
+// {
+//     Console.Write("Ты не знаешь сколько дней в неделе?");
+// }
+// else
+// {
+//     if (day == 1)
+//     {
+//         Console.Write("Понедельник");
+//     }
+//     if (day == 2)
+//     {
+//         Console.Write("Вторник");
+//     }
+//     if (day == 3)
+//     {
+//         Console.Write("Это среда мой друг");
+//     }
+//     if (day == 4)
+//     {
+//         Console.Write("Четверг");
+//     }
+//     if (day == 5)
+//     {
+//         Console.Write("Выдыхай, пятница");
+//     }
+//     if (day == 6)
+//     {
+//         Console.Write("Суббота");
+//     }
+//     if (day == 7)
+//     {
+//         Console.Write("Воскресенье");
+//     }
+// }
+
+// Еще задача
+
+Console.Write("Введите трехзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int y = num % 10;
+
+Console.WriteLine(y);
