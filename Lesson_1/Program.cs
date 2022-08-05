@@ -67,8 +67,11 @@
 
 // Еще задача
 
-Console.Write("Введите трехзначное число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int y = num % 10;
+// Console.Write("Введите трехзначное число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int y = num % 10;
 
-Console.WriteLine(y);
+// Console.WriteLine(y);
+
+// Домашние задачки
+
