@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-Console.Write("Загадай число: ");
+Console.Write("Загадай нормальное целое положительное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int sqrt = number * number ;
 
