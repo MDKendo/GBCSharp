@@ -77,25 +77,58 @@ Console.Clear();
 
 // На вход два числа и выдает большее и меньшее.
 
-Console.WriteLine("Чтобы узнать какое число больше и меньше ");
+// Console.WriteLine("Чтобы узнать какое число больше и меньше ");
+// Console.Write("Введи первое число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введи второе число: ");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+// if (num1 == num2)
+// {
+//     Console.Write("Ты ввел два одинаковых числа");
+// }
+// else
+// {
+//     if (num1 > num2)
+//     {
+//         Console.WriteLine("Максимальное число: "+ num1);
+//         Console.WriteLine("Минимальное число: " + num2);
+//     }
+//     else
+//     {
+//         Console.WriteLine("Максимальное число: "+ num2);
+//         Console.WriteLine("Минимальное число: " + num1);
+//     }
+// }
+
+// Вход три числа и выдает максимальное
+
+Console.WriteLine("Чтобы узнать какое число больше");
 Console.Write("Введи первое число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введи второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
-if (num1 == num2)
+Console.Write("Введи третье число: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+int max = 0;
+if (num1 > num2)
 {
-    Console.Write("Ты ввел два одинаковых числа");
-}
-else
-{
-    if (num1 > num2)
+    if (num1 > num3)
     {
-        Console.WriteLine("Максимальное число: "+ num1);
-        Console.WriteLine("Минимальное число: " + num2);
+        Console.Write("Самое большое число: " + num1);
+    }
+    else 
+    {
+        Console.Write("Самое большое число:" + num3);
+    }
+}
+else 
+{
+    if (num2 > num3)
+    {
+       Console.Write("Самое большое число: " + num2); 
     }
     else
     {
-        Console.WriteLine("Максимальное число: "+ num2);
-        Console.WriteLine("Минимальное число: " + num1);
+        Console.Write("Самое большое число: " + num3);
     }
 }
