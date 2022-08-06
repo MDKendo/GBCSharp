@@ -109,7 +109,6 @@ Console.Clear();
 // int num2 = Convert.ToInt32(Console.ReadLine());
 // Console.Write("Введи третье число: ");
 // int num3 = Convert.ToInt32(Console.ReadLine());
-// int max = 0;
 // if (num1 > num2)
 // {
 //     if (num1 > num3)
@@ -135,14 +134,40 @@ Console.Clear();
 
 // На вход число и выдает, является ли число четным
 
-Console.WriteLine("Четное ли число?");
+// Console.WriteLine("Четное ли число?");
+// Console.Write("Введи число: ");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// if (num1 % 2 == 0)
+// {
+//     Console.Write("Твое число четное");
+// }
+// else
+// {
+//     Console.Write("Твое число не четное");
+// }
+
+// На вход число N, на выход все четные числа
+
+Console.WriteLine("Не знаю зачем, но тебе нужен список четных чисел до твоего числа, тогда");
 Console.Write("Введи число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
-if (num1 % 2 == 0)
+int count = 2;
+if (num1 <= 0)
 {
-    Console.Write("Твое число четное");
+    Console.Write("Можешь не указывать свое IQ, попробуй еще раз");
 }
 else
 {
-    Console.Write("Твое число не четное");
+    while (count <= num1)
+    {
+        if (count % 2 == 0)
+        {
+            Console.Write(count + ",");
+            count = count+1;
+        }
+        else 
+        {
+            count = count+1;
+        }
+    }
 }
