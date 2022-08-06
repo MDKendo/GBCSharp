@@ -1,6 +1,6 @@
 ﻿// Первая задача
 
-// Console.Clear();
+Console.Clear();
 
 // Console.Write("Загадай нормальное целое положительное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
@@ -75,3 +75,27 @@
 
 // Домашние задачки
 
+// На вход два числа и выдает большее и меньшее.
+
+Console.WriteLine("Чтобы узнать какое число больше и меньше ");
+Console.Write("Введи первое число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введи второе число: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+if (num1 == num2)
+{
+    Console.Write("Ты ввел два одинаковых числа");
+}
+else
+{
+    if (num1 > num2)
+    {
+        Console.WriteLine("Максимальное число: "+ num1);
+        Console.WriteLine("Минимальное число: " + num2);
+    }
+    else
+    {
+        Console.WriteLine("Максимальное число: "+ num2);
+        Console.WriteLine("Минимальное число: " + num1);
+    }
+}
