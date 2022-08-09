@@ -1,4 +1,4 @@
-﻿//Задача номер 10
+﻿// Задача номер 10
 
 // Console.Write("Введите любое трехзначное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
@@ -14,9 +14,43 @@
 // Console.WriteLine(num3);
 // }
 
+// Задача номер 13
 
+Console.Write("Введите любое число: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
+if ((number >= -99) && (number <= 99))
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+else if (number > 0)
+{
+    Console.WriteLine(number.ToString()[2]);
+}
+else
+{
+    Console.WriteLine(number.ToString()[3]);
+}
 
+// Console.Write("Введите любое число: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+
+// if ((number >= -99) && (number <= 99))
+// {
+//     Console.WriteLine("Третьей цифры нет");
+// }
+// else if (number < 1000)
+// {
+//     Console.WriteLine(number%10);
+// }
+// else if (number < 10000)
+// {
+//     Console.WriteLine(number/10%10);
+// }
+// else 
+// {
+//     Console.WriteLine(number/100%10);
+// }
 // Задача номер 15
 
 // Console.WriteLine("Выходной ли сегодня? ");
