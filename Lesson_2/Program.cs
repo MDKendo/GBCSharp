@@ -38,26 +38,6 @@
 // Задача номер 13 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 // Вариант 2 
 
-// Console.Write("Введите любое число, и я угадаю третью цифру : ");
-// string number = Console.ReadLine();
-
-// if (((number[0] != '-' && number[0] != '1') && (number[0] != '2' && number[0] != '3')) && ((number[0] != '4' && number[0] != '5') && (number[0] != '6' && number[0] != '7')) && ((number[0] != '8' && number[0] != '9') && (number[0] != '+' && number[0] != '0')))
-// {
-//     Console.WriteLine("Введены не цифры");
-// }
-// else if ((number[0] == '-' && number.Length == 3) || (number[0] != '-' && number.Length == 2))
-// {
-//     Console.WriteLine("Третьей цифры нет");
-// }
-// else if (number[0] == '-')
-// {
-//     Console.WriteLine(number[3]);
-// }
-// else 
-// {
-//     Console.WriteLine(number[2]);
-// }
-
 Console.Write("Введите любое число, и я угадаю третью цифру : ");
 string number = Console.ReadLine();
 int num;
@@ -82,6 +62,7 @@ else
 {
     Console.WriteLine("Введены не цифры");
 }
+
 // Задача номер 15 Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 // Console.WriteLine("Выходной ли сегодня? ");
