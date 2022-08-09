@@ -1,17 +1,8 @@
-﻿int number1 = new Random().Next(10,100);  //последнеее число не входит
+﻿int number1 = new Random().Next(100,1000);  //последнеее число не входит
 Console.WriteLine(number1);
 
-int num1 = number1/10;
-Console.WriteLine(num1);
+int num1 = number1/100;
+int num3 = number1%10;
 
-int num2 = number1%10;
-Console.WriteLine(num2);
-
-if (num1 > num2)
-{
-    Console.WriteLine(num1);
-}
-else
-{
-    Console.WriteLine(num2);
-}
+Console.Write(num1);
+Console.Write(num3);
