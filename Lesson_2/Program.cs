@@ -1,6 +1,6 @@
 ﻿Console.Clear();
 
-// Задача номер 10
+// Задача номер 10 Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
 // Console.Write("Введите любое трехзначное число: ");
 // int number = Convert.ToInt32(Console.ReadLine());
@@ -16,55 +16,45 @@
 // Console.WriteLine(num3);
 // }
 
-// Задача номер 13 вариант 1
+// Задача номер 13 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. 
+// Вариант 1
 
-Console.Write("Введите любое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите любое число, и я угадаю третью цифру: ");
+// int number = Convert.ToInt32(Console.ReadLine());
 
-if ((number >= -99) && (number <= 99))
-{
-    Console.WriteLine("Третьей цифры нет");
-}
-else if (number > 0)
-{
-    Console.WriteLine(number.ToString()[2]);
-}
-else
-{
-    Console.WriteLine(number.ToString()[3]);
-}
-
-// Задача номер 13 вариант 2 
-
-// string number;
-// Console.Write("Введите любое число: ");
-
-// number = Console.ReadLine();
-
-// if (number[0] == '-')
-// {
-//     if (number.Length == 3)
+// if ((number >= -99) && (number <= 99))
 // {
 //     Console.WriteLine("Третьей цифры нет");
 // }
+// else if (number > 0)
+// {
+//     Console.WriteLine(number.ToString()[2]);
+// }
 // else
+// {
+//     Console.WriteLine(number.ToString()[3]);
+// }
+
+// Задача номер 13 Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+// Вариант 2 
+
+// Console.Write("Введите любое число, и я угадаю третью цифру : ");
+// string number = Console.ReadLine();
+
+// if ((number[0] == '-' && number.Length == 3) || (number[0] != '-' && number.Length == 2))
+// {
+//     Console.WriteLine("Третьей цифры нет");
+// }
+// else if (number[0] == '-')
 // {
 //     Console.WriteLine(number[3]);
 // }
-// }
 // else 
-// {
-//     if (number.Length == 2)
-// {
-//     Console.WriteLine("Третьей цифры нет");
-// }
-// else
 // {
 //     Console.WriteLine(number[2]);
 // }
-// }
 
-// Задача номер 15
+// Задача номер 15 Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 // Console.WriteLine("Выходной ли сегодня? ");
 // Console.Write("Введи любой номер дня от 1 до 7: ");
