@@ -1,8 +1,42 @@
-﻿int number1 = new Random().Next(100,1000);  //последнеее число не входит
-Console.WriteLine(number1);
+﻿// Задача номер 15
 
-int num1 = number1/100;
-int num3 = number1%10;
+Console.WriteLine("Выходной ли сегодня? ");
+Console.Write("Введи любой номер дня от 1 до 7: ");
 
-Console.Write(num1);
-Console.Write(num3);
+int day = Convert.ToInt32(Console.ReadLine());
+
+if (day < 1 || day > 7)
+{
+    Console.WriteLine("Таких дней нет, пробуй снова");
+}
+else
+{
+    if (day == 1)
+    {
+        Console.WriteLine("Понедельник - не выходной");
+    }
+    if (day == 2)
+    {
+        Console.WriteLine("Вторник - не выходной");
+    }
+    if (day == 3)
+    {
+        Console.WriteLine("It is Wednesday, my dudes - не выходной");
+    }
+    if (day == 4)
+    {
+        Console.WriteLine("Четверг - не выходной");
+    }
+    if (day == 5)
+    {
+        Console.WriteLine("Выдыхай, пятница");
+    }
+    if (day == 6)
+    {
+        Console.WriteLine("Суббота - ВЫХОДНОЙ");
+    }
+    if (day == 7)
+    {
+        Console.WriteLine("Воскресенье - ВЫХОДНОЙ");
+    }
+}
