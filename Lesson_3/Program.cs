@@ -58,9 +58,12 @@ Console.WriteLine ("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 if (num<0)
 {
-num  = num*-1;
+for (int i = 1; i >= num; i--)
+{
+    Console.Write($"{Math.Pow(i,3)}, ");
 }
-for (int i = 1; i <= num; i++)
+}
+else for (int i = 1; i <= num; i++)
 {
     Console.Write($"{Math.Pow(i,3)}, ");
 }
