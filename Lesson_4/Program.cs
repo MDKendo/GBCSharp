@@ -69,7 +69,7 @@ if (isnum)
     {
         summa = summa + (num[j]-'0'); // convert.toint32 возвращает порядковый номер символа из таблицы ASCII, так как все цифры идут по порядку, можно вычесть символ '0' и получить нужное значение
     }
-    Console.WriteLine($"Сумма чисел в числе {num} = {summa}");
+    Console.WriteLine($"Сумма цифр в числе {num} = {summa}");
 }
     else
     {
