@@ -56,7 +56,7 @@ string num = Console.ReadLine();
 long number; 
 bool isnum = long.TryParse(num, out number); 
 int i = 0;
-int g;
+int j;
 int summa = 0;
 int dl = num.Length;
 if (isnum) 
@@ -65,9 +65,9 @@ if (isnum)
     {
     i = 1;
     }
-    for (g = i; g < dl; g++)
+    for (j = i; j < dl; j++)
     {
-        summa = summa + (num[g]-'0'); // convert.toint32 возвращает порядковый номер символа из таблицы ASCII, так как все цифры идут по порядку, можно вычесть символ '0' и получить нужное значение
+        summa = summa + (num[j]-'0'); // convert.toint32 возвращает порядковый номер символа из таблицы ASCII, так как все цифры идут по порядку, можно вычесть символ '0' и получить нужное значение
     }
     Console.WriteLine($"Сумма чисел в числе {num} = {summa}");
 }
