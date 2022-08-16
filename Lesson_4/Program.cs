@@ -17,43 +17,61 @@
 // }
 
 // Это если всетаки цикл
-Console.WriteLine("Введите число А: ");
-int numA = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число B: ");
-int numB = Convert.ToInt32(Console.ReadLine());
-int stepen = numA;
-int count = 1;
-double otvet = 0;
-if (numB == 0)
-{
-    Console.WriteLine("Любое число в степени 0 = 1");
-}
-else if (numB > 0)
-{
-    while (count < numB)
-   {
-        stepen = stepen * numA;
-        count++;
-    }
-    Console.WriteLine($" Число {numA} в степени {numB} = {stepen}");
-}
-    else
-{
-     numB = -numB;
-     while (count < numB)
-   {
-        stepen = stepen * numA;
-        count++;
-    }
-    Console.WriteLine($" Число {numA} в степени {-numB} = {(double)1/stepen}");
-}
+// Console.WriteLine("Введите число А: ");
+// int numA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B: ");
+// int numB = Convert.ToInt32(Console.ReadLine());
+// int stepen = numA;
+// int count = 1;
+// double otvet = 0;
+// if (numB == 0)
+// {
+//     Console.WriteLine("Любое число в степени 0 = 1");
+// }
+// else if (numB > 0)
+// {
+//     while (count < numB)
+//    {
+//         stepen = stepen * numA;
+//         count++;
+//     }
+//     Console.WriteLine($" Число {numA} в степени {numB} = {stepen}");
+// }
+//     else
+// {
+//      numB = -numB;
+//      while (count < numB)
+//    {
+//         stepen = stepen * numA;
+//         count++;
+//     }
+//     Console.WriteLine($" Число {numA} в степени {-numB} = {(double)1/stepen}");
+// }
 
 
 // Задача номер 27. напишите программу, которая принимает на вход число и выдает сумму цифр в числе.
 
-// Console.WriteLine("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-// string number = Convert.ToString(num);
-// int summa = 0;
-// summa = number [0] + number [1] + number [2] + number [3] + number [4] + number [5];
-// Console.WriteLine(summa);
+Console.WriteLine("Введите число: ");
+string num = Console.ReadLine();
+long number; 
+bool isnum = long.TryParse(num, out number); 
+int i = 0;
+int g;
+int summa = 0;
+int dl = num.Length;
+if (isnum) 
+{
+    if (num[0] == '-')
+    {
+    i = 1;
+    }
+    for (g = i; g < dl; g++)
+    {
+        summa = summa + (num[g]-'0'); // через конверт то чар превращается в значение из таблицы символов, а так символ - символ ASCII
+    }
+    Console.WriteLine($"Сумма чисел в числе {num} = {summa}");
+}
+    else
+    {
+    Console.WriteLine("Ввели не число");
+    }
