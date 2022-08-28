@@ -53,17 +53,28 @@
 
 // Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-Console.WriteLine ("Найти все кубы до любого числа");
-Console.WriteLine ("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num<0)
+// Console.WriteLine ("Найти все кубы до любого числа");
+// Console.WriteLine ("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num<0)
+// {
+// for (int i = 1; i >= num; i--)
+// {
+//     Console.Write($"{Math.Pow(i,3)}, ");
+// }
+// }
+// else for (int i = 1; i <= num; i++)
+// {
+//     Console.Write($"{Math.Pow(i,3)}, ");
+// }
+
+Console.WriteLine ("Введите число А: ");
+int numA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("Введите число B: ");
+int numB = Convert.ToInt32(Console.ReadLine());
+int stepen = numA;
+for (int count = 1; count == numB; count ++)
 {
-for (int i = 1; i >= num; i--)
-{
-    Console.Write($"{Math.Pow(i,3)}, ");
-}
-}
-else for (int i = 1; i <= num; i++)
-{
-    Console.Write($"{Math.Pow(i,3)}, ");
+    stepen = stepen + stepen * numA;
+    Console.WriteLine(stepen);
 }
