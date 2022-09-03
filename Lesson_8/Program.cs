@@ -184,25 +184,94 @@
 
 // Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 
-Console.Write("Введите размеры массива строки, столбцы, глубина через пробел: ");
-string[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-int[,,] array = GetArray(new int [] { int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2])}, 10, 98);
+// Console.Write("Введите размеры массива строки, столбцы, глубина через пробел: ");
+// string[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+// int[,,] array = GetArray(new int [] { int.Parse(nums[0]), int.Parse(nums[1]), int.Parse(nums[2])}, 10, 98);
+// PrintArray(array);
+
+// int[,,] GetArray(int [] sizes, int min, int max)
+// {
+//     int [,,] result = new int [sizes[0], sizes[1], sizes[2]];
+//     for (int i = 0; i<result.GetLength(0); i++)
+//     {
+//         for (int j = 0; j<result.GetLength(1); j++)
+//         {
+//             int d=0;
+//             while (d < result.GetLength(2))
+//             {
+//                 int element = new Random().Next(min, max +1);
+//                 if (dublElement(result,element)) continue;
+//                 result[i,j,d] = element;
+//                 d++;
+//             }
+//         }
+//     }
+//     return result;
+
+// }
+
+// bool dublElement(int[,,] array, int num)
+// {
+//     for (int i = 0; i<array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j<array.GetLength(1); j++)
+//         {
+//             for (int d = 0;d <array.GetLength(2); d++)
+//             {
+//                 if(array[i, j, d] == num) return true;
+//             }
+//         }
+//     }
+//     return false;
+// }
+
+// void PrintArray(int[,,] array)
+// {
+//     for (int i = 0; i<array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             for (int d = 0; d<array.GetLength(2); d++)
+//             {
+//                 Console.Write($"{array[i,j,d]} ({i}, {j}, {d})  ");
+//             }
+//             Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+Console.WriteLine("Введите размеры массива");
+Console.Write("Введите количество строк массива: ");
+int r = int.Parse(Console.ReadLine());
+Console.Write("Введите количество столбцов массива: ");
+int c = int.Parse(Console.ReadLine());
+Console.Write("Введите глубину массива: ");
+int d = int.Parse(Console.ReadLine());
+
+if (r+c+d > 13)
+{
+    Console.Write("Количество двухзначных НЕ повторяющихся чисел ограниченно");
+}
+else
+{
+int[,,] array = GetArray(new int [] { r, c, d});
 PrintArray(array);
 
-int[,,] GetArray(int [] sizes, int min, int max)
+int[,,] GetArray(int [] sizes)
 {
     int [,,] result = new int [sizes[0], sizes[1], sizes[2]];
     for (int i = 0; i<result.GetLength(0); i++)
     {
         for (int j = 0; j<result.GetLength(1); j++)
         {
-            int k=0;
-            while (k < result.GetLength(2))
+            int d=0;
+            while (d < result.GetLength(2))
             {
-                int element = new Random().Next(min, max +1);
+                int element = new Random().Next(10, 99);
                 if (dublElement(result,element)) continue;
-                result[i,j,k] = element;
-                k++;
+                result[i,j,d] = element;
+                d++;
             }
         }
     }
@@ -216,9 +285,9 @@ bool dublElement(int[,,] array, int num)
     {
         for (int j = 0; j<array.GetLength(1); j++)
         {
-            for (int k = 0; k<array.GetLength(2); k++)
+            for (int d = 0;d <array.GetLength(2); d++)
             {
-                if(array[i, j, k] == num) return true;
+                if(array[i, j, d] == num) return true;
             }
         }
     }
@@ -231,12 +300,15 @@ void PrintArray(int[,,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k<array.GetLength(2); k++)
+            for (int d = 0; d<array.GetLength(2); d++)
             {
-                Console.Write($"{array[i,j,k]} ({i}, {j}, {k})  ");
+                Console.Write($"{array[i,j,d]} ({i}, {j}, {d})  ");
             }
             Console.WriteLine();
         }
         Console.WriteLine();
     }
 }
+}
+
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4. Не понятно. Сложновато
