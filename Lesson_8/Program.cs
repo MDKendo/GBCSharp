@@ -181,3 +181,82 @@
 //     }
 //     return arrayC;
 // }
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
+
+Console.WriteLine("Введите размеры массива");
+Console.Write("Ведите количество строк массива: ");
+int rows = int.Parse(Console.ReadLine());
+Console.Write("Ведите количество стобцов массива: ");
+int columns = int.Parse(Console.ReadLine());
+Console.Write("Ведите глубину массива: ");
+int  depth = int.Parse(Console.ReadLine());
+//int[,,] array = GetArray(rows, columns, depth);
+
+int [,,] array = new int [rows, columns, depth];
+    for (int i = 0; i<array.GetLength(0); i++)
+    {
+        for (int j = 0; j<array.GetLength(1); j++)
+        {
+            for (int d = 0; d<array.GetLength(1); d++)
+            {
+                int element = new Random().Next(10, 99);
+               
+            }
+        }
+    }
+
+
+PrintArray(array);
+
+// int [,,] GetArray(int a, int b, int c)
+// {
+//     int [,,] array = new int [a, b, c];
+//     for (int i = 0; i<array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j<array.GetLength(1); j++)
+//         {
+//             int d=0;
+//             while (d < array.GetLength(2))
+//             {
+//                 int element = new Random().Next(10, 99);
+//                 if (dublElement(array,element)) continue;
+//                 array[i,j,d] = element;
+//                 d++;
+//             }
+//         }
+//     }
+//     return array;
+
+// }
+
+bool dublElement(int[,,] arra, int num)
+{
+    for (int i = 0; i<array.GetLength(0); i++)
+    {
+        for (int j = 0; j<array.GetLength(1); j++)
+        {
+            for (int d = 0; i<array.GetLength(2); d++)
+            {
+                if(array[i,j,d] == num) return true;
+            }
+        }
+    }
+    return false;
+}
+
+void PrintArray(int[,,] array)
+{
+    for (int i = 0; i<array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int d = 0; d<array.GetLength(2); d++)
+            {
+                Console.Write($"{array[i,j,d]} ({i}, {j}, {d})  ");
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine();
+    }
+}
